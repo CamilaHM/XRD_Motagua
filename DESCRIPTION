@@ -1,0 +1,5 @@
+Package: XRD_Motagua
+Type: Application
+Shiny: true
+R-Version: 4.2.3
+Imports: tidyverse, leaflet, leaflet.minicharts
