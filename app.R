@@ -2,10 +2,10 @@ library(tidyverse)
 library(leaflet)
 library(leaflet.minicharts)
 
-dataXlsx <- readxl::read_xlsx("/Users/camila/Documents/UCR/Doctorado/XRD_DESY/id_jade_xrd_desy.xlsx",sheet = "Sheet1") 
+dataXlsx <- readxl::read_xlsx("id_jade_xrd_desy.xlsx",sheet = "Sheet1") 
 dataXlsx <- dataXlsx %>% filter(!code.crt %in% c("geo11", "mot202"),type %in% c("mot","vdc") )
 
-dataSitios <- readxl::read_xlsx("/Users/camila/Documents/UCR/Doctorado/XRD_DESY/id_jade_xrd_desy.xlsx",sheet = "ubi")
+dataSitios <- readxl::read_xlsx("id_jade_xrd_desy.xlsx",sheet = "ubi")
 dataSitios$lat <- as.numeric(str_replace(dataSitios$lat, ",", "."))
 dataSitios$long<- as.numeric(str_replace(dataSitios$long, ",", "."))
 
